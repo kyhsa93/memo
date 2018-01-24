@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sign in</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form>
+    <ion-item>
+      <ion-label floating>
+        User ID
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="id" name="id">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>
+        User Password
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="password">
+      </ion-input>
+    </ion-item>
+    <div style="float: right;">
+      <button ion-button clear (click)="signIn()">
+        Sign in
+      </button>
+      <button ion-button clear (click)="signUp()">
+        Sign up
+      </button>
+    </div>
+  </form>
+  {{errorMessage}}
+</ion-content>
